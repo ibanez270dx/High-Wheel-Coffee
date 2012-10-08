@@ -1,38 +1,76 @@
 source 'https://rubygems.org'
 
+########################################
+#  Core
+########################################
+
+# Rails
 gem 'rails', '3.2.8'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# MySQL
+gem 'mysql2'
 
-gem 'sqlite3'
+# jQuery
+gem 'jquery-rails'
 
+########################################
+#  Assets
+########################################
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
+  gem 'twitter-bootstrap-rails'
 end
 
-gem 'jquery-rails'
+########################################
+#  Development 
+########################################
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :development do
+  # Use Thin instead of WEBrick, it's faster and has no warning
+  gem 'thin'
+end
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+########################################
+#  Testing
+########################################
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :test do
+  # To use debugger
+  # The "ruby-debug" gem is unmaintained, this "debugger" replacement seems to work.
+  # "ruby-debug19" and "ruby-debug193" also don't work :)
+  gem 'debugger', require: 'ruby-debug'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+  # Change Time.now for testing purposes
+  gem 'timecop'
+end
 
-# To use debugger
-# gem 'debugger'
+########################################
+#  APIs
+########################################
+
+# Facebook
+gem 'koala'
+
+########################################
+#  Formats
+########################################
+
+# Markdown
+gem 'redcarpet'
+
+########################################
+#  Convenience
+########################################
+
+# Image attachments
+# Latest major version changes image paths without providing a nice upgrade path
+# It's also a bit too new, let's wait a bit before switching
+gem 'paperclip', '<3.0'
+
+# Encryption
+gem 'bcrypt-ruby', require: 'bcrypt'
