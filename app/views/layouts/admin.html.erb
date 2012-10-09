@@ -20,18 +20,20 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="#">High Wheel Coffee Admin</a>
-        <div class="nav-collapse">
-          <ul class="nav">
-            <li><%= link_to "Admins" %></li>
-            <li><%= link_to "Home" %></li>
-            <li><%= link_to "This Week's Coffees" %></li>
-            <li><%= link_to "Location" %></li>
-            <li><%= link_to "Get Involved" %></li>
-            <li><%= link_to "Contact Us" %></li>
-            <li><%= link_to "Blog" %></li>
-          </ul>
-        </div>
+        <%= link_to 'High Wheel Coffee Admin', admin_login_path, class: 'brand' %>
+        <% if current_admin %>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><%= link_to "Admins" %></li>
+              <li><%= link_to "Home" %></li>
+              <li><%= link_to "This Week's Coffees" %></li>
+              <li><%= link_to "Location" %></li>
+              <li><%= link_to "Get Involved" %></li>
+              <li><%= link_to "Contact Us" %></li>
+              <li><%= link_to "Blog" %></li>
+            </ul>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
