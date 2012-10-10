@@ -1,0 +1,35 @@
+<div class="control-group">
+  <%= f.label :email, class: 'control-label' %>
+  <div class="control">
+    <%= f.text_field :email %>
+  </div>
+</div>
+
+<div class="control-group">  
+  <%= f.label :password, class: 'control-label' %>
+  <div class="control">
+    <%= f.password_field :password %>
+  </div>
+	<div class="muted"><%= "Leave blank to not change." if @admin.persisted? %></div>
+</div>
+
+<div class="control-group">
+  <%= f.label :password_confirmation, 'Confirm Password', class: 'control-label' %>
+  <div class="control">
+    <%= f.password_field :password_confirmation %>
+  </div>
+</div>
+
+<div class="control-group">
+  <%= f.label :first_name, class: 'control-label' %>
+  <div class="control">
+    <%= f.text_field :first_name %>
+  </div>
+</div>
+
+<div class="control-group">  
+  <%= f.label :last_name, class: 'control-label' %>
+  <div class="control">  
+    <%= f.text_field :last_name %>
+  </div>
+</div>
