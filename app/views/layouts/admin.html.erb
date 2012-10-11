@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="<%= "#{controller.controller_name} #{controller.action_name.gsub(/_/, '-')}" %>">
+<html class="admin <%= "#{controller.controller_name} #{controller.action_name.gsub(/_/, '-')}" %>">
 <head>
   <title>High Wheel Coffee - Admin</title>
   <!--[if lt IE 9]>
@@ -24,8 +24,8 @@
         <% if current_admin %>
           <div class="nav-collapse">
             <ul class="nav">
-              <li <%= current_page_is('admins#any') %>><%= link_to "Admins" %></li>
-              <li <%= current_page_is('coffees#any') %>><%= link_to "Coffees" %></li>
+              <li <%= current_page_is('admins#any') %>><%= link_to "Admins", admin_admins_path %></li>
+              <li <%= current_page_is('coffees#any') %>><%= link_to "Coffees", admin_coffees_path %></li>
               <li <%= current_page_is('events#any') %>><%= link_to "Events" %></li>
               <li <%= current_page_is('blog#any') %>><%= link_to "Blog" %></li>
               <li><%= link_to "Logout", admin_logout_path %></li>

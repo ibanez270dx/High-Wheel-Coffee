@@ -5,7 +5,7 @@ HighWheelCoffee::Application.routes.draw do
     match '/logout' => 'admins#logout', as: :logout
     
     resources :admins
-    resources :content
+    resources :coffees
   end
   
   root :to => 'content#home'

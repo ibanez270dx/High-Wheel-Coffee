@@ -1,0 +1,61 @@
+<div class="control-group condensed">
+  <%= f.label :featured, class: 'control-label' %>
+  <div class="control">
+    <%= f.check_box :featured %>
+  </div>
+</div>
+
+<div class="control-group">
+  <%= f.label :name, class: 'control-label' %>
+  <div class="control">
+    <%= f.text_field :name %>
+  </div>
+</div>
+
+<div class="control-group">  
+  <%= f.label :growing_region, class: 'control-label' %>
+  <div class="control">
+    <%= f.text_field :growing_region %>
+  </div>
+</div>
+
+<div class="control-group">  
+  <%= f.label :cultivar, class: 'control-label' %>
+  <div class="control">
+    <%= f.text_field :cultivar %>
+  </div>
+</div>
+
+<div class="control-group">  
+  <%= f.label :processing, class: 'control-label' %>
+  <div class="control">
+    <%= f.text_field :processing %>
+  </div>
+</div>
+
+<div class="control-group">  
+  <%= f.label :flavor_profile, class: 'control-label' %>
+  <div class="control">
+    <%= f.text_area :flavor_profile %>
+  </div>
+</div>
+
+<div class="control-group">  
+  <%= f.label :primary_photo, class: 'control-label' %>
+  <div class="control">
+    <%= f.file_field :primary_photo %>
+  </div>
+  <div class="side-image">
+    <% unless @coffee.primary_photo.to_s.empty? %><%= image_tag @coffee.primary_photo.url(:small) %><% end %>
+  </div>
+</div>
+
+<div class="control-group">  
+  <%= f.label :secondary_photo, class: 'control-label' %>
+  <div class="control">
+    <%= f.file_field :secondary_photo %>
+  </div>
+  <div class="side-image">
+    <% unless @coffee.secondary_photo.to_s.empty? %><%= image_tag @coffee.secondary_photo.url(:small) %><% end %>
+  </div>
+</div>

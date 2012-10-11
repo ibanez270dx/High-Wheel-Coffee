@@ -70,7 +70,7 @@ gem 'redcarpet'
 # Image attachments
 # Latest major version changes image paths without providing a nice upgrade path
 # It's also a bit too new, let's wait a bit before switching
-gem 'paperclip', '<3.0'
+gem 'paperclip', '~> 3.0'
 
 # Encryption
 gem 'bcrypt-ruby', require: 'bcrypt'

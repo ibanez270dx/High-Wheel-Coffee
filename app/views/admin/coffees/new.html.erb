@@ -1,0 +1,11 @@
+<h2>New Coffee</h2>
+
+<%= form_for [:admin, @coffee], url: admin_coffees_path, html: { class: 'form-horizontal' } do |f| %>
+  <%= render partial: "shared/error-messages", locals: { object: @coffee } %>
+	<%= render partial: "form", locals: { f: f } %>
+	
+	<div class="form-actions well">
+    <%= f.submit 'Add Coffee', class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', admin_coffees_path, class: 'btn' %>
+  </div>
+<% end %>
