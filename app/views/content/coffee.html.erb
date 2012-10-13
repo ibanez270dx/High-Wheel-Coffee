@@ -1,0 +1,24 @@
+
+<h1><%= @coffee.name %></h1>
+<table class="coffee-details">
+  <tr>
+    <td>Growing Region:</td>
+    <td><%= @coffee.growing_region %></td>
+  </tr>
+  <tr>
+    <td>Cultivar:</td>
+    <td><%= @coffee.cultivar %></td>
+  </tr>
+  <tr>
+    <td>Processing:</td>
+    <td><%= @coffee.processing %></td>
+  </tr>
+  <tr>
+    <td>Flavor Profile:</td>
+    <td><%= @coffee.flavor_profile %></td>
+  </tr>
+</table>
+
+<%= image_tag(@coffee.primary_photo.url(:large), class: 'pull-right img-polaroid') if @coffee.primary_photo.present? %>
+
+<%= image_tag(@coffee.secondary_photo.url(:large), class: 'pull-right img-polaroid') if @coffee.secondary_photo.present? %>

@@ -45,4 +45,12 @@ class Admin::CoffeesController < ApplicationController
     end
   end
   
+  def destroy_photo
+    @coffee = Coffees.find params[:id]
+    @coffee.update_attributes "#{params[:kind]}_photo".to_sym => nil
+  
+    flash[:success] = "#{params[:kind].capitalize} photo deleted successfully"
+    redirect_to edit_admin_coffee_path(@coffee)
+  end
+  
 end

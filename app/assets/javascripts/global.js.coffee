@@ -30,6 +30,9 @@ $(document).ready ->
   $(window).resize (event) ->
     scaleLogo()
     
+  $('tr[data-url]').live "click", (event) ->
+    window.location = $(this).attr('data-url')  
+    
   ######################################
   # Init
   ######################################

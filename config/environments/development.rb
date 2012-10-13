@@ -36,5 +36,5 @@ HighWheelCoffee::Application.configure do
   config.assets.debug = true
   
   # Don't use the compiled assets for development
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 end

@@ -12,6 +12,14 @@
   </div>
 </div>
 
+<div class="control-group">
+  <%= f.label :url_name, class: 'control-label' %>
+  <div class="control">
+    <%= f.text_field :url_name %>
+  </div>
+  <span class="muted">Leave blank to auto-generate based on name</span>
+</div>
+
 <div class="control-group">  
   <%= f.label :growing_region, class: 'control-label' %>
   <div class="control">
@@ -44,9 +52,14 @@
   <%= f.label :primary_photo, class: 'control-label' %>
   <div class="control">
     <%= f.file_field :primary_photo %>
+    <% if @coffee.primary_photo.present? %>
+      <%= link_to 'Delete', admin_destroy_photo_path(id: @coffee.id, kind: :primary), class: 'btn btn-small btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
   </div>
   <div class="side-image">
-    <% unless @coffee.primary_photo.to_s.empty? %><%= image_tag @coffee.primary_photo.url(:small) %><% end %>
+    <% if @coffee.primary_photo.present? %>
+      <%= image_tag @coffee.primary_photo.url(:small) %>
+    <% end %>
   </div>
 </div>
 
@@ -54,8 +67,13 @@
   <%= f.label :secondary_photo, class: 'control-label' %>
   <div class="control">
     <%= f.file_field :secondary_photo %>
+    <% if @coffee.secondary_photo.present? %>
+      <%= link_to 'Delete', admin_destroy_photo_path(id: @coffee.id, kind: :secondary), class: 'btn btn-small btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
   </div>
   <div class="side-image">
-    <% unless @coffee.secondary_photo.to_s.empty? %><%= image_tag @coffee.secondary_photo.url(:small) %><% end %>
+    <% if @coffee.secondary_photo.present? %>
+      <%= image_tag @coffee.secondary_photo.url(:small) %>
+    <% end %>
   </div>
 </div>
