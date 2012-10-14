@@ -24,3 +24,27 @@ div.error-messages {
     li { color: #BF0000; }
   }
 }
+  
+a.facebook-button {
+  display:block; width:64px; height:64px;
+  background-image: url('/assets/facebook.png');
+  &:hover { background-image: url('/assets/facebook-active.png'); }
+} 
+
+a.twitter-button {
+  display:block; width:64px; height:64px;
+  background-image: url('/assets/twitter.png');
+  &:hover { background-image: url('/assets/twitter-active.png'); }
+}
+
+a.yelp-button {
+  display:block; width:64px; height:64px;
+  background-image: url('/assets/yelp.png');
+  &:hover { background-image: url('/assets/yelp-active.png'); }
+}
+
+a.square-button {
+  display:block; width:64px; height:64px;
+  background-image: url('/assets/square.png');
+  &:hover { background-image: url('/assets/square-active.png'); }
+}
