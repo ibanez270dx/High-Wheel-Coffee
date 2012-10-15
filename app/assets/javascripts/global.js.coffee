@@ -33,6 +33,9 @@ $(document).ready ->
   $('tr[data-url]').live "click", (event) ->
     window.location = $(this).attr('data-url')  
     
+  $('li.social[data-url]').live "click", (event) ->
+    window.location = $(this).attr('data-url')
+    
   ######################################
   # Init
   ######################################

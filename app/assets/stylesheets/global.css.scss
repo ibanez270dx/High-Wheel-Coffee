@@ -24,27 +24,28 @@ div.error-messages {
     li { color: #BF0000; }
   }
 }
+
+li.social {
+  top:5px; position:relative; margin-left:14px;
+  display:block; width:48px; height:48px;
+
+  &.facebook {
+    background-image: url('/assets/facebook.png');
+    &:hover { background-image: url('/assets/facebook-active.png'); } 
+  }
+
+  &.twitter {
+    background-image: url('/assets/twitter.png');
+    &:hover { background-image: url('/assets/twitter-active.png'); }
+  }
   
-a.facebook-button {
-  display:block; width:64px; height:64px;
-  background-image: url('/assets/facebook.png');
-  &:hover { background-image: url('/assets/facebook-active.png'); }
-} 
+  &.yelp {
+    background-image: url('/assets/yelp.png');
+    &:hover { background-image: url('/assets/yelp-active.png'); }
+  }
 
-a.twitter-button {
-  display:block; width:64px; height:64px;
-  background-image: url('/assets/twitter.png');
-  &:hover { background-image: url('/assets/twitter-active.png'); }
-}
-
-a.yelp-button {
-  display:block; width:64px; height:64px;
-  background-image: url('/assets/yelp.png');
-  &:hover { background-image: url('/assets/yelp-active.png'); }
-}
-
-a.square-button {
-  display:block; width:64px; height:64px;
-  background-image: url('/assets/square.png');
-  &:hover { background-image: url('/assets/square-active.png'); }
+  &.square {
+    background-image: url('/assets/square.png');
+    &:hover { background-image: url('/assets/square-active.png'); }
+  }
 }
